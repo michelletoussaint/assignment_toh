@@ -64,13 +64,9 @@ class TowerOfHanoi
   end #end of ask_move
 
   def validate_move()
-    # puts "validate move module starts running"
 
     @from_i = @stacks.index(@from)
     @to_i = @stacks.index(@to)
-
-    # Check conversion is done well
-    # puts "[#{@from_i}, #{@to_i}]"
     
     # Take the disk out of the 'from' stack
     possible_move = @board[@from_i][-1]
@@ -93,8 +89,6 @@ class TowerOfHanoi
   end #end of validate_move
 
   def finished?()
-    # puts "Checking if game is finished..."
-    # puts "b= #{@board[1]} or c= #{@board[2]} should be #{@initial_disks}"
     #Check if second stack or third stack is equal to the initial configuration of disks at the first stack
     if @board[1] == @initial_disks || @board[2]== @initial_disks
       return true
